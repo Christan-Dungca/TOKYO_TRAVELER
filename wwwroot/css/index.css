@@ -7,16 +7,6 @@ body {
   background: #e6e6e6;
 }
 
-body nav {
-  width: 80px;
-  height: 100px;
-  background: rgba(23, 23, 23, 0.6);
-  position: absolute;
-  left: 0;
-  top: 40%;
-  z-index: 4;
-}
-
 body .video-wrapper {
   position: absolute;
   top: 0;
@@ -35,15 +25,15 @@ body .video-wrapper {
 }
 
 body .video-wrapper .title-wrapper {
-  z-index: 2;
+  z-index: 4;
   text-align: center;
 }
 
 body .video-wrapper .title-wrapper .header-main-title {
   color: #dbdbdb;
-  font-size: 3.2rem;
+  font-size: 3.5rem;
   letter-spacing: 2.5rem;
-  z-index: 2;
+  z-index: 4;
   display: block;
   opacity: 0;
   margin-bottom: 18px;
@@ -53,7 +43,7 @@ body .video-wrapper .title-wrapper .header-sub-title {
   color: #dbdbdb;
   font-size: 1.5rem;
   letter-spacing: 0.8rem;
-  z-index: 2;
+  z-index: 4;
   opacity: 0;
 }
 
@@ -75,13 +65,37 @@ body .video-wrapper .video-background {
 }
 
 body .video-wrapper .video-background-mask {
-  background-color: rgba(0, 0, 0, 0.397);
+  background-color: rgba(0, 0, 0, 0.4);
   position: absolute;
   width: 100%;
   height: 100%;
   top: 0;
   right: 0;
   z-index: 1;
+}
+
+body .video-wrapper a {
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 1;
+  text-decoration: none;
+  line-height: 8px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  color: #cecdcd;
+}
+
+body .video-wrapper a::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  border-width: 0 0 1px;
+  border-style: solid;
 }
 
 /* CSS Animations  */
