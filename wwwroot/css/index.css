@@ -1,0 +1,219 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: garamond-premier-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+  background: #e6e6e6;
+}
+
+body nav {
+  width: 80px;
+  height: 100px;
+  background: rgba(23, 23, 23, 0.6);
+  position: absolute;
+  left: 0;
+  top: 40%;
+  z-index: 4;
+}
+
+body .video-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .video-wrapper .title-wrapper {
+  z-index: 2;
+  text-align: center;
+}
+
+body .video-wrapper .title-wrapper .header-main-title {
+  color: #dbdbdb;
+  font-size: 3.2rem;
+  letter-spacing: 2.5rem;
+  z-index: 2;
+  display: block;
+  opacity: 0;
+  margin-bottom: 18px;
+}
+
+body .video-wrapper .title-wrapper .header-sub-title {
+  color: #dbdbdb;
+  font-size: 1.5rem;
+  letter-spacing: 0.8rem;
+  z-index: 2;
+  opacity: 0;
+}
+
+body .video-wrapper .video-background {
+  /* makes video at least 100% wide and tall */
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  /* prevents the browser from stretching or squishing video */
+  width: auto;
+  height: auto;
+  /*center video*/
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body .video-wrapper .video-background-mask {
+  background-color: rgba(0, 0, 0, 0.397);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* CSS Animations  */
+@-webkit-keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes appear-to-right {
+  0% {
+    opacity: 0;
+    right: 60px;
+  }
+  50% {
+    opacity: 0;
+    right: 40px;
+  }
+  100% {
+    opacity: 1;
+    right: 22px;
+  }
+}
+
+@keyframes appear-to-right {
+  0% {
+    opacity: 0;
+    right: 60px;
+  }
+  50% {
+    opacity: 0;
+    right: 40px;
+  }
+  100% {
+    opacity: 1;
+    right: 22px;
+  }
+}
+
+@-webkit-keyframes appear-to-down {
+  0% {
+    opacity: 0;
+    top: 45%;
+  }
+  50% {
+    opacity: 0;
+    top: 45%;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+@keyframes appear-to-down {
+  0% {
+    opacity: 0;
+    top: 45%;
+  }
+  50% {
+    opacity: 0;
+    top: 45%;
+  }
+  100% {
+    opacity: 1;
+    top: 50%;
+  }
+}
+
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes nav-hover {
+  0% {
+    width: 33px;
+  }
+  50% {
+    width: 33px;
+  }
+  100% {
+    width: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes nav-hover {
+  0% {
+    width: 33px;
+  }
+  50% {
+    width: 33px;
+  }
+  100% {
+    width: 20px;
+    opacity: 1;
+  }
+}
+
+.fade-in-element {
+  -webkit-animation: fade-in 3s;
+          animation: fade-in 3s;
+}
+/*# sourceMappingURL=index.css.map */
