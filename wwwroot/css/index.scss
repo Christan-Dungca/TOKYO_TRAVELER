@@ -116,6 +116,12 @@
                     border-width: 0 0 1px;
                     border-style: solid;
                 }
+
+                &:hover::after {
+                   animation: appear-to-right 1s; 
+                }
+
+               
             }
         }
           // end of video-wrapper section
@@ -132,16 +138,17 @@
     }
   
     @keyframes appear-to-right{
-  
-        0% {opacity: 0; right: 60px;}
-        50% {opacity: 0; right: 40px;}
-        100% {opacity: 1; right: 22px;}
+        0% {opacity: .5; left: 5px}
+        50% {opacity: .65; left: 10px}
+        75% {opacity: .8; left: 5px}
+        100% {opacity: 1; left: 0}
     }
   
     @keyframes appear-to-down{
-        0% {opacity: 0; top: 45%;}
-        50% {opacity: 0; top: 45%;}
-        100% {opacity: 1; top: 50%;}
+        0% {opacity: .5; top: 5px;}
+        50% {opacity: .65; top: 10px;}
+        75% {opacity: .8; top: 5px;}
+        100% {opacity: 1; top: 0;}
     }
   
     @keyframes fade-in {

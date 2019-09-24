@@ -10,7 +10,14 @@ namespace FinalProjectTT.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet("")]
         public IActionResult Index()
+        {
+            return View();
+        }
+
+        [HttpGet("Articles")]
+        public IActionResult Articles()
         {
             return View();
         }
