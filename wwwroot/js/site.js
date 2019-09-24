@@ -25,7 +25,7 @@ const t2 = new TimelineLite();
 
 t2.fromTo('.header-sub-title', 1.2, {
     opacity : 0,
-    x : -100,
+    x : 100,
     ease : Power2.easeOut
 }, {
     opacity : 0.8, 
