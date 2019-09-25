@@ -1,4 +1,4 @@
-// toggle method 
+// toggle tween to play and be reversed
 
 function toggleTween(tween){
     tween.reversed() ? tween.play() : tween.reverse();
@@ -61,23 +61,80 @@ t3.fromTo('.box', 1.5, {
 });
 
 // //////////////////////// //
-//       explore            //
+//  explore article section //
 // //////////////////////// //
 
-const airlineArticle = document.querySelector('.airline')
+// for the airline article section
 
-const t4 = new TimelineLite();
-t4.fromTo('.airline-article', 2, {
+const airlineExplore = document.querySelector('.airline')
+
+const t4 = new TimelineLite({paused : true, reversed: true});
+
+t4.to('.logo', 1.5, {
     opacity : 0,
-    y : -500
+    x : -1000,
+    ease : Power2.easeOut
+})
+.to('nav', 2, {
+    opacity : 0,
+    x : 1000,
+    ease : Power2.easeOut
+}, '-= 1.5')
+.to('.content-wrapper', 2, {
+    opacity : 0,
+    y : -1000,
+    ease : Power2.easeOut
+}, '-= 1')
+.fromTo('.airline-article', 2, {
+    opacity : 0,
+    y : -1000,
+    ease : Power2.easeOut
 }, {
     opacity : 1,
     y : 0
-})
+}, "-= 1.5")
 
-airlineArticle.addEventListener('click', function(){
-    toggleTween(t4);
+airlineExplore.addEventListener('click', () => {
+    // t1.play()
+    toggleTween(t4)
+});
+
+// //////////////////////// //
+//  explore housing section //
+// //////////////////////// //
+
+const housingExplore = document.querySelector('.housing')
+
+const t5 = new TimelineLite({paused : true, reversed : true});
+
+t5.to('.logo', 1.5, {
+    opacity : 0,
+    x : -1000,
+    ease : Power2.easeOut
 })
+.to('nav', 2, {
+    opacity : 0,
+    x : 1000,
+    ease : Power2.easeOut
+}, '-= 1.5')
+.to('.content-wrapper', 2, {
+    opacity : 0,
+    y : -1000,
+    ease : Power2.easeOut
+}, '-= 1')
+.fromTo('.housing-article', 2, {
+    opacity : 0,
+    y : -1000,
+    ease : Power2.easeOut
+}, {
+    opacity : 1,
+    y : 0
+}, "-= 1.5")
+
+housingExplore.addEventListener('click', () => {
+    toggleTween(t5)
+});
+
 
 // //////////////////////// //
 // smooth scroll animation  //
@@ -118,9 +175,11 @@ function smoothScroll(target, duration){
     requestAnimationFrame(animation);
     console.log(targetPosition);
 }
+
 // //////////////////////// //
 //    selecting elements    //
 // //////////////////////// //
+
 var sectionOne = document.querySelector('.sectionOne');
 var sectionTwo = document.querySelector('.sectionTwo');
 var sectionThree = document.querySelector('.sectionThree');
