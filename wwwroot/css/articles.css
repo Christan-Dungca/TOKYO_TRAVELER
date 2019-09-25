@@ -1,5 +1,4 @@
 body {
-  background: black;
   width: 100%;
   height: 100vh;
 }
@@ -146,5 +145,18 @@ body section.airline-article {
   width: 100%;
   height: 100%;
   opacity: 0;
+  z-index: 7;
+  background: #666640;
+}
+
+body section.housing-article {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  z-index: 7;
+  background: #b3694c;
 }
 /*# sourceMappingURL=articles.css.map */
