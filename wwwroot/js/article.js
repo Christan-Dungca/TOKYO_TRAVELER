@@ -1,3 +1,9 @@
+// toggle method 
+
+function toggleTween(tween){
+    tween.reversed() ? tween.play() : tween.reverse();
+}
+
 // /////////////////// //
 //        logo         //
 // /////////////////// //
@@ -53,6 +59,25 @@ t3.fromTo('.box', 1.5, {
     opacity: 1,
     x : 0
 });
+
+// //////////////////////// //
+//       explore            //
+// //////////////////////// //
+
+const airlineArticle = document.querySelector('.airline')
+
+const t4 = new TimelineLite();
+t4.fromTo('.airline-article', 2, {
+    opacity : 0,
+    y : -500
+}, {
+    opacity : 1,
+    y : 0
+})
+
+airlineArticle.addEventListener('click', function(){
+    toggleTween(t4);
+})
 
 // //////////////////////// //
 // smooth scroll animation  //

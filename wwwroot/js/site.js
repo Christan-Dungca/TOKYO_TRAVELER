@@ -1,4 +1,7 @@
-﻿// /////////////////// //
+﻿var image = document.querySelector('img');
+
+
+// /////////////////// //
 // header text appears //
 // /////////////////// //
 
