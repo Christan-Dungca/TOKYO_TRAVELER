@@ -53,7 +53,7 @@ a.navbar-brand {
   
   body {
     /* Margin bottom by footer height */
-    
+    width:100%;
     margin-bottom: 60px;
   }
   .footer {
@@ -64,16 +64,46 @@ a.navbar-brand {
     /* Set the fixed height of the footer here */
     height: 60px;
     line-height: 60px; /* Vertically center the text there */
-  }
-  .housingClass{
+}
+.housingClass{
     outline: 10px solid black !important;
-  }
-  .misc-prio{
+}
+.misc-prio{
     display: inline-block;
-    margin-right: 55px;
-  }
+    margin-right: 40px;
+    font-size: 12px;
+}
+.notch-line{
+    width: 100%;
+    height: 10px;
+    display: inline-block;
+    padding:0;
+}
+.notch{
+    margin-right: 27%;
+    margin-left: 9px;
+    display: inline-block;
+}
+#see-results{
+    width: 600px;
+    height: 500px;
+    display: inline-block;
+    background-color: black;
+    position: absolute;
+    left: 50%;
+    top: 90%;
+    transform: translate(-50%, -18%);
+}
   .slidecontainer {
-    width: 50%;
+    background-color: white;
+    opacity: 0.9;
+    width: 400px;
+    position: absolute;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -17%);
+    border-radius: 1px;
+    padding: 8px;
   }
   
   .slider {
@@ -106,3 +136,113 @@ a.navbar-brand {
     background: #4CAF50;
     cursor: pointer;
   }
+.subcontainer{
+    width: 100%;
+    height: 100vh;
+    background:url("../images/bridge.jpg");
+    background-position: left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+}
+.container{
+    width:100%;
+}
+.help-tip{
+    position: absolute;
+    left: 95%;
+    top: 46%;
+    transform: translate(-50%, -17%);
+    text-align: center;
+    background-color: #BCDBEA;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+    line-height: 26px;
+    cursor: default;
+    opacity: 1;
+    z-index: 3;
+}
+
+.help-tip:before{
+    content:'?';
+    font-weight: bold;
+    color:#fff;
+}
+
+.help-tip:hover p{
+    display:block;
+    transform-origin: 100% 0%;
+
+    -webkit-animation: fadeIn 0.3s ease-in-out;
+    animation: fadeIn 0.3s ease-in-out;
+    
+
+}
+#duration{
+    border-top:none;
+    border-left: none;
+    border-right:none;
+}
+#amount{
+    border-top:none;
+    border-left: none;
+    border-right:none;
+}
+.help-tip p{    /* The tooltip */
+    display: none;
+    text-align: left;
+    background-color: #1E2021;
+    padding: 20px;
+    width: 300px;
+    position: absolute;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+    right: -4px;
+    color: #FFF;
+    font-size: 13px;
+    line-height: 1.4;
+    
+}
+
+.help-tip p:before{ /* The pointer of the tooltip */
+    position: absolute;
+    content: '';
+    width:0;
+    height: 0;
+    border:6px solid transparent;
+    border-bottom-color:#1E2021;
+    right:10px;
+    top:-12px;
+    
+}
+
+.help-tip p:after{ /* Prevents the tooltip from being hidden */
+    width:100%;
+    height:40px;
+    content:'';
+    position: absolute;
+    top:-40px;
+    left:0;
+    
+}
+
+/* CSS animation */
+
+@-webkit-keyframes fadeIn {
+    0% { 
+        opacity:0; 
+        transform: scale(0.6);
+    }
+
+    100% {
+        opacity:100%;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeIn {
+    0% { opacity:0; }
+    100% { opacity:100%; }
+}

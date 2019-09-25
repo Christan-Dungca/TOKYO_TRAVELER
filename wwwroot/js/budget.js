@@ -29,25 +29,21 @@ var slider = document.getElementById("myRange");
             range = 0.25;
             
             var result = ((max1 - min1) * (range) + min1);
-            // document.getElementById("test").innerHTML = result;
         }
         if(slider.value >= 26 && slider.value <=50)
         {
             range = 0.5;
             var result = ((max1 - min1) * (range) + min1);
-            // document.getElementById("test").innerHTML = result;
         }
         if(slider.value >= 51 && slider.value <=75)
         {
             range = 0.75;
             var result = ((max1 - min1) * (range) + min1);
-            // document.getElementById("test").innerHTML = result;
         }
         if(slider.value >= 76 && slider.value <=100)
         {
             range = 1;
             var result = ((max1 - min1) * (range) + min1);
-            // document.getElementById("test").innerHTML = result;
             
         }
         /////////////////////////////////////////////////////////////////////////////
@@ -55,19 +51,16 @@ var slider = document.getElementById("myRange");
         {
             range = 0.25;
             var result = ((max1 - min1) * (range) + min1);
-            // document.getElementById("test").innerHTML = result;
         }
         if(slider2.value >= 26 && slider2.value <=50)
         {
             range = 0.5;
             var result = ((max1 - min1) * (range) + min1);
-            // document.getElementById("test").innerHTML = result;
         }
         if(slider2.value >= 51 && slider2.value <=75)
         {
             range = 0.75;
             var result = ((max1 - min1) * (range) + min1);
-            // document.getElementById("test").innerHTML = result;
         }
         if(slider2.value >= 76 && slider2.value <=100)
         {
@@ -76,6 +69,12 @@ var slider = document.getElementById("myRange");
             // document.getElementById("test").innerHTML = result;
             
         }
+        console.log(result);
         //budget is start value - result / amount of days
-        document.getElementById("total").innerHTML = Math.floor((start.value - result) / (dur.value))+ " Per Day";
+        if(result >= 0){
+            document.getElementById("total").innerHTML = Math.floor((start.value - result) / (dur.value))+ " Per Day";
+        }else{
+            result = 0;
+            return(document.getElementById("err").innerHTML = "Invalid Amount, please change your amount");
+        }
     }
