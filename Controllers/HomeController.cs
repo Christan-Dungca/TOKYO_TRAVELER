@@ -26,7 +26,11 @@ namespace FinalProjectTT.Controllers
         {
             return View();
         }
-
+        [HttpGet("Budget")]
+        public IActionResult Budget()
+        {
+            return View();
+        }
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
