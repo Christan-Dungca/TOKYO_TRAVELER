@@ -20,7 +20,7 @@ body h3 span {
 
 body nav {
   position: absolute;
-  top: 5%;
+  top: 4%;
   left: 0;
   z-index: 4;
   width: 100%;
@@ -65,7 +65,7 @@ body .content-wrapper {
 }
 
 body .content-wrapper .box {
-  margin-top: 15%;
+  margin-top: 16%;
   margin-left: 20%;
   display: inline-block;
   width: 650px;
@@ -81,15 +81,16 @@ body .content-wrapper .box a {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   color: white;
-  border: 1px solid white;
-  padding: 5px 12px;
-  border: white 1px;
+  background: #101010;
+  padding: 8px 20px;
+  border: white 1px solid;
   font-size: 20px;
 }
 
 body .content-wrapper .box a:hover {
   color: black;
   background: white;
+  text-decoration: none;
   border: 1px solid #101010;
 }
 

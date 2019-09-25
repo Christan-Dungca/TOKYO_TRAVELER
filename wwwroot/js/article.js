@@ -118,9 +118,11 @@ function smoothScroll(target, duration){
     requestAnimationFrame(animation);
     console.log(targetPosition);
 }
+
 // //////////////////////// //
 //    selecting elements    //
 // //////////////////////// //
+
 var sectionOne = document.querySelector('.sectionOne');
 var sectionTwo = document.querySelector('.sectionTwo');
 var sectionThree = document.querySelector('.sectionThree');
