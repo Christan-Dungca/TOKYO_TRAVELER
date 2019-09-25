@@ -37,10 +37,11 @@ t2.fromTo('nav', 1.5, {
     opacity : 0.8,
     y : 25,
 })
-// .to('.nav', 0.5, {
-//     opacity: 1,
-//     y : 0
-// });
+.to('.nav', 0.5, {
+    opacity: 1,
+    y : 0
+});
+
 // /////////////////////// //
 //          images         //
 // /////////////////////// //
@@ -70,14 +71,15 @@ const airlineExplore = document.querySelector('.airline')
 
 const t4 = new TimelineLite({paused : true, reversed: true});
 
+
 t4.to('.logo', 1.5, {
-    opacity : 0,
-    x : -1000,
+    opacity : 1,
+    // x : -1000,
     ease : Power2.easeOut
 })
 .to('nav', 2, {
-    opacity : 0,
-    x : 1000,
+    opacity : 1,
+    // x : 1000,
     ease : Power2.easeOut
 }, '-= 1.5')
 .to('.content-wrapper', 2, {
@@ -124,12 +126,12 @@ t5.to('.logo', 1.5, {
 }, '-= 1')
 .fromTo('.housing-article', 2, {
     opacity : 0,
-    y : -1000,
+    y : 1000,
     ease : Power2.easeOut
 }, {
     opacity : 1,
     y : 0
-}, "-= 1.5")
+})
 
 housingExplore.addEventListener('click', () => {
     toggleTween(t5)
