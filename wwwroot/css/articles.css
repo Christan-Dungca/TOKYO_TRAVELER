@@ -161,17 +161,15 @@ body section.airline-article .img-wrapper {
 
 body section.airline-article .img-wrapper h1 {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  top: 75%;
+  left: 10%;
+  width: 1000px;
   font-size: 70px;
+  font-weight: 400;
+  letter-spacing: 3px;
   color: white;
   background-color: #101010;
-}
-
-body section.airline-article .img-wrapper h1 span {
-  display: block;
+  padding: 10px 15px;
 }
 
 body section.airline-article section.article-background {

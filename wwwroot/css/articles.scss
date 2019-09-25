@@ -199,18 +199,17 @@ body {
 
       h1 {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
+        top: 75%;
+        left: 10%;
+        width: 1000px;
 
         font-size: 70px;
+        font-weight: 400;
+        letter-spacing: 3px;
         color: white;
         
         background-color: $primary-color;
-        
-        span {
-          display: block;
-        }
+        padding: 10px 15px;
       }
     }
 
