@@ -8,17 +8,21 @@ body {
   height: 100vh;
 }
 
-body .logo {
+body a {
+  z-index: 9;
+}
+
+body a .logo {
   position: absolute;
   top: 7%;
   left: 5%;
-  z-index: 8;
+  z-index: 9;
   font-weight: 300;
   color: white;
   opacity: 0;
 }
 
-body .logo span {
+body a .logo span {
   display: block;
 }
 
@@ -26,7 +30,7 @@ body nav {
   position: absolute;
   top: 4%;
   left: 0;
-  z-index: 8;
+  z-index: 3;
   width: 100%;
   height: 100px;
   padding-top: 30px;
@@ -70,9 +74,8 @@ body .content-wrapper .box {
   margin-top: 16%;
   margin-left: 20%;
   display: inline-block;
-  width: 650px;
+  width: 730px;
   height: 425px;
-  background: #bda8a8;
   opacity: 0;
 }
 
@@ -102,6 +105,19 @@ body .content-wrapper .one {
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+body .content-wrapper .one h1 {
+  position: absolute;
+  left: -6%;
+  -webkit-writing-mode: vertical-lr;
+      -ms-writing-mode: tb-lr;
+          writing-mode: vertical-lr;
+  text-orientation: sideways;
+  font-size: 80px;
+  font-weight: 400;
+  color: white;
+  text-shadow: #101010;
 }
 
 body .content-wrapper .two {
@@ -159,20 +175,7 @@ body section.airline-article .img-wrapper {
   display: inline-block;
 }
 
-body section.airline-article .img-wrapper h1 {
-  position: absolute;
-  top: 75%;
-  left: 10%;
-  width: 1000px;
-  font-size: 70px;
-  font-weight: 400;
-  letter-spacing: 3px;
-  color: white;
-  background-color: #101010;
-  padding: 10px 15px;
-}
-
-body section.airline-article section.article-background {
+body section.article-background {
   position: absolute;
   top: 100%;
   left: 0;
@@ -181,7 +184,7 @@ body section.airline-article section.article-background {
   background: #101010;
 }
 
-body section.airline-article section.airline-article-section {
+body section.airline-article-section {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -192,20 +195,30 @@ body section.airline-article section.airline-article-section {
   background-color: white;
 }
 
-body section.airline-article section.airline-article-section h3 {
-  font-size: 70px;
+body section.airline-article-section h3 {
+  font-size: 40px;
   margin: 60px 40px;
   letter-spacing: 4.5px;
   font-weight: 400;
   color: black;
 }
 
-body section.airline-article section.airline-article-section h3 span {
+body section.airline-article-section h3 span {
   display: block;
   color: black;
 }
 
-body section.housing-article {
+body section.airline-article-section h1 {
+  margin: 10% 5%;
+}
+
+body section.airline-article-section p {
+  margin: 5%;
+  line-height: 2rem;
+  font-size: 18px;
+}
+
+section.housing-article {
   position: absolute;
   top: 0;
   left: 0;
