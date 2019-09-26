@@ -52,15 +52,14 @@
         // console.log("Slider sum: " + sliderSum);
         // console.log("housing per day " + HperDay);
         if(sliderSum <= 1){
-            document.getElementById("total").innerHTML = "$" + Math.floor(total)+ " Total average amount per day ";
-            document.getElementById("totalHousing").innerHTML = "$" + Math.floor(HperDay)+ " On Average For Housing Per Day";
-            document.getElementById("totalFood").innerHTML = "$" + Math.floor(FperDay)+ " On Average For Food Per Day";
-            document.getElementById("totalLeisure").innerHTML = "$" + Math.floor(LperDay)+ " On Average For Leisure Per Day";
-            document.getElementById("totalTransportation").innerHTML = "$" + Math.floor(TperDay)+ " On Average for Transportation";
-            console.log('yoooooo under 1');
+            document.getElementById("total").innerHTML = "$" + Math.floor(total)+ " Total average per day";
+            document.getElementById("totalHousing").innerHTML = "$" + Math.floor(HperDay)+ " Housing Per Day";
+            document.getElementById("totalFood").innerHTML = "$" + Math.floor(FperDay)+ " Food Per Day";
+            document.getElementById("totalLeisure").innerHTML = "$" + Math.floor(LperDay)+ " Leisure Per Day";
+            document.getElementById("totalTransportation").innerHTML = "$" + Math.floor(TperDay)+ " Transportation";
         }
         if(sliderSum > 1){
-            return(document.getElementById("err").innerHTML = "For now, just change sliders.");
+            return(document.getElementById("err").innerHTML = "Please lower a slider");
         }
     }
     ///////////////////////////////////////////////////////////////////////////////////
