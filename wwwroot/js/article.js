@@ -89,12 +89,12 @@ t4.to('.logo', 1.5, {
 }, '-= 1')
 .fromTo('.airline-article', 2, {
     opacity : 0,
-    y : -1000,
+    x : -1500,
     ease : Power2.easeOut
 }, {
     opacity : 1,
-    y : 0
-}, "-= 1.5")
+    x : 0
+}, "-= 1")
 
 airlineExplore.addEventListener('click', () => {
     // t1.play()
@@ -126,7 +126,7 @@ t5.to('.logo', 1.5, {
 }, '-= 1')
 .fromTo('.housing-article', 2, {
     opacity : 0,
-    y : 1000,
+    y : -100,
     ease : Power2.easeOut
 }, {
     opacity : 1,
