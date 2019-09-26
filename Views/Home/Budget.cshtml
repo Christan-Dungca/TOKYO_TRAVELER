@@ -19,7 +19,7 @@
             <h3>Amount:</h3>
             <input type="text" placeholder="Enter a whole number" name="amount" id="amount">
             <hr>
-            <h3>Housing </h3>
+            <h3>Price Range </h3>
             <div class="help-tip">
                 <p>Each line represents a notch on the scale. Starting from lowest priority to highest priority, move the slider to the position you want to allocate more funds to on your trip.</p>
             </div>
@@ -29,23 +29,9 @@
                 <div class="notch">|</div>
                 <p style="display:inline-block">|</p>
             </div>
-            <input type="range" name="housing-slider" step="33" class="slider" id="myRange" min="0" max="100" value="0">
-            <h3>Food </h3>
-            <div class="notch-line">
-                <div class="notch">|</div>
-                <div class="notch">|</div>
-                <div class="notch">|</div>
-                <p style="display:inline-block">|</p>
-            </div>
-            <input type="range" name="Food-slider" step="33" class="slider" id="myRange" min="0" max="100" value="0">
-            <h3>Transportation </h3>
-            <div class="notch-line">
-                <div class="notch">|</div>
-                <div class="notch">|</div>
-                <div class="notch">|</div>
-                <p style="display:inline-block">|</p>
-            </div>
-            <input type="range" name="Transportation-slider" step="33" class="slider" id="myRange2" min="0" max="100" value="0">
+            <input type="range" name="housing-slider" step="33" class="slider" id="myRange" min="0" max="99" value="0">
+            
+            <!-- <input type="range" name="Transportation-slider" step="33" class="slider" id="myRange3" min="0" max="100" value="0"> -->
             <!-- <p>Value: <span id="demo"></span></p> -->
             <button id="getinfo" onclick="getinfo()" class="btn btn-primary" style="margin-left:40%;">Calculate</button>
         </div>
@@ -55,10 +41,15 @@
     </div>
     <div id="see-results" >
         <h1 style="font-weight: 400; font-family: sans-serif; text-align:center; font-size: 124px; color:white;">RESULTS</h1>
+        <h2 style="color:white; text-align:center;"><span id="total"></span></h2>
+        <h2 style="color:white; text-align:center;"><span id="totalHousing"></span></h2>
+        <h2 style="color:white; text-align:center;"><span id="totalFood"></span></h2>
+        <h2 style="color:white; text-align:center;"><span id="totalLeisure"></span></h2>
+        <h2 style="color:white; text-align:center;"><span id="totalTransportation"></span></h2>
+        <h2 style="color:white; text-align:center;"><span id="extra"></span></h2>
     </div>
     <div class="result-part">
         <div class="result-list">
-            <h1><span id="total"></span></h1>
         </div>
     </div>
 
