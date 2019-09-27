@@ -7,25 +7,26 @@
         start = document.getElementById("amount"),
         total = document.getElementById("total");
         
-//variables represent the average spending amount per, until we can generate with an API
-    var smHousing = 22,
-        medHousing = 45,
-        bigHousing = 75,
-        luxuryHousing = 100,
-        smFood = 5,
-        medFood = 10,
-        bigFood = 25,
-        luxuryFood = 50,
-        smTrans = 10,
-        bigTrans = 20,
-        smLeisure = 10,
-        bigLeisure = 20;
+    var yenConversion = 107.83;
+
     output.innerHTML = slider.value;
 
     slider.oninput = function() {
         output.innerHTML = this.value;
     }
+    function convertCash(){
+        document.getElementById("slider-tip").innerHTML = "¥" +Math.floor(start.value * yenConversion);
+    }
+    //////////////////////////////////////
+    //add a hover effect on the slider to let ppl know how much is what
+    //////////////////////////////////////
     
+    // document.addEventListener("mousemove", showSliderTip);
+
+    // function showSliderTip(){
+    //     document.getElementById("nonerr").innerHTML = "TESSSST";
+    // }
+
     function getinfo()
     {
         //new variables to calculate %'s
@@ -45,13 +46,14 @@
         var TperDay = (startVal * totalTransportation) / parseInt(dur.value);
         ///////////////////////////////////////////
         var total = (HperDay + FperDay + LperDay + TperDay);
-        var yenConversion = 107.83;
+        
         
         console.log(startVal);
         // console.log(totalHousing);
         // console.log(parseInt(dur.value));
         // console.log("Slider sum: " + sliderSum);
         // console.log("housing per day " + HperDay);
+        
         if(sliderSum <= 1){
             document.getElementById("total").innerHTML = "Total/Day = $" + Math.floor(total);
             document.getElementById("totalHousing").innerHTML = "Housing/Day = $" + Math.floor(HperDay);
@@ -68,6 +70,7 @@
 
             if(totalHousing <= 0.1){
                 document.getElementById("img1").innerHTML = "<img src='../images/cheap-housing.jpg' alt='blahhhhhhhhh'>";
+                // document.getElementById("myRangeHousing").style.background = "red";
             }
             else if(totalHousing <= 0.3){
                 document.getElementById("img1").innerHTML = "<img src='../images/med-housing.jpg' alt='blahhhhhhhhh'>";

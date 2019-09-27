@@ -163,6 +163,13 @@ a.navbar-brand {
 #suggestions h3{
   display: inline-block;
   margin-left: 10%;
+  
+}
+.longbar{
+  background-color: rgb(59, 59, 59);
+  display: inline-block;
+  width: 100%;
+  height: 20px;
 }
   .slidecontainer {
     background-color: white;
