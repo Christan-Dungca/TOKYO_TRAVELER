@@ -69,6 +69,8 @@ t3.fromTo('.box', 2, {
 
 const airlineExplore = document.querySelector('.airline')
 
+const airlineNav = document.querySelector(".airline-nav")
+
 const t4 = new TimelineLite({paused : true, reversed: true});
 
 
