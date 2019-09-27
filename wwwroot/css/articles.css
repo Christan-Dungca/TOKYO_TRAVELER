@@ -15,8 +15,8 @@ body a {
 body a .logo {
   position: absolute;
   top: 7%;
-  left: 5%;
-  z-index: 9;
+  left: 8%;
+  z-index: 11;
   font-weight: 300;
   color: white;
   opacity: 0;
@@ -30,7 +30,7 @@ body nav {
   position: absolute;
   top: 4%;
   left: 0;
-  z-index: 3;
+  z-index: 9;
   width: 100%;
   height: 100px;
   padding-top: 30px;
@@ -71,6 +71,7 @@ body .content-wrapper {
 }
 
 body .content-wrapper .box {
+  vertical-align: top;
   margin-top: 16%;
   margin-left: 20%;
   display: inline-block;
@@ -109,13 +110,12 @@ body .content-wrapper .one {
 
 body .content-wrapper .one h1 {
   position: absolute;
-  left: -6%;
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
-  text-orientation: sideways;
-  font-size: 80px;
-  font-weight: 400;
+  bottom: 14%;
+  left: -25%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 100px;
+  font-weight: 300;
   color: white;
   text-shadow: #101010;
 }
@@ -127,11 +127,35 @@ body .content-wrapper .two {
   background-size: cover;
 }
 
+body .content-wrapper .two h1 {
+  position: absolute;
+  bottom: 23%;
+  left: -32%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 100px;
+  font-weight: 300;
+  color: white;
+  text-shadow: #101010;
+}
+
 body .content-wrapper .three {
   background: url("../images/ramen-shop-real.jpg");
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+body .content-wrapper .three h1 {
+  position: absolute;
+  bottom: 8%;
+  left: -23%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 100px;
+  font-weight: 300;
+  color: white;
+  text-shadow: #101010;
 }
 
 body .content-wrapper .four {
@@ -141,11 +165,35 @@ body .content-wrapper .four {
   background-repeat: no-repeat;
 }
 
+body .content-wrapper .four h1 {
+  position: absolute;
+  bottom: 17%;
+  left: -28%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 100px;
+  font-weight: 300;
+  color: white;
+  text-shadow: #101010;
+}
+
 body .content-wrapper .five {
   background: url("../images/ame.jpg");
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+body .content-wrapper .five h1 {
+  position: absolute;
+  bottom: 29%;
+  left: -34%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 100px;
+  font-weight: 300;
+  color: white;
+  text-shadow: #101010;
 }
 
 body .content-wrapper .six {
@@ -155,6 +203,18 @@ body .content-wrapper .six {
   background-position: left;
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+body .content-wrapper .six h1 {
+  position: absolute;
+  bottom: 18%;
+  left: -28%;
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 100px;
+  font-weight: 300;
+  color: white;
+  text-shadow: #101010;
 }
 
 body section.airline-article {
@@ -169,63 +229,77 @@ body section.airline-article {
 
 body section.airline-article .img-wrapper {
   width: 100%;
-  height: 100vh;
+  height: 85%;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   background: url(../images/in-air.jpg);
   background-size: cover;
   display: inline-block;
 }
 
-body section.article-background {
+body section.airline-article .img-wrapper .text-wrapper {
+  position: absolute;
+  left: 9%;
+  bottom: 35%;
+  background: #679db4;
+}
+
+body section.airline-article .img-wrapper .text-wrapper h1 {
+  padding: 15px 45px 5px 45px;
+  color: white;
+  font-size: 40px;
+  font-weight: 400;
+  word-spacing: 8px;
+}
+
+body section.airline-article .img-wrapper .text-wrapper p {
+  padding: 0px 45px 0 45px;
+  color: white;
+}
+
+body section.airline-article div.article-shadow {
+  position: absolute;
+  top: 47%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 94%);
+          transform: translate(-50%, 94%);
+  width: 80.2%;
+  height: 180px;
+  background: rgba(103, 157, 180, 0.4);
+}
+
+body section.airline-article section.article-background {
   position: absolute;
   top: 100%;
   left: 0;
   width: 100%;
   height: 100vh;
-  background: #101010;
 }
 
-body section.airline-article-section {
+body section.airline-article .airline-article-section {
+  padding: 40px;
   position: absolute;
-  top: 50%;
+  top: 49%;
   left: 50%;
-  -webkit-transform: translate(-50%, 33%);
-          transform: translate(-50%, 33%);
-  width: 80%;
+  -webkit-transform: translate(-50%, 15%);
+          transform: translate(-50%, 15%);
+  width: 82%;
   height: 1000px;
   background-color: white;
 }
 
-body section.airline-article-section h3 {
-  font-size: 40px;
-  margin: 60px 40px;
-  letter-spacing: 4.5px;
-  font-weight: 400;
-  color: black;
-}
-
-body section.airline-article-section h3 span {
-  display: block;
-  color: black;
-}
-
-body section.airline-article-section h1 {
-  margin: 10% 5%;
-}
-
-body section.airline-article-section p {
+body section.airline-article .airline-article-section h3 {
   margin: 5%;
+}
+
+body section.airline-article .airline-article-section p {
+  margin: 30px 5%;
   line-height: 2rem;
   font-size: 18px;
 }
 
-section.housing-article {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 7;
-  background: #b3694c;
+body section.airline-article .airline-article-section img {
+  margin: 20px 10% 20px 9%;
+  width: 80%;
 }
 /*# sourceMappingURL=articles.css.map */
