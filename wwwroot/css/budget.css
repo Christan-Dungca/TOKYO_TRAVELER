@@ -40,7 +40,7 @@ a.navbar-brand {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 2000px;
     z-index: 3;
     background: #101010;
     overflow-x: scroll;
@@ -60,7 +60,10 @@ a.navbar-brand {
     /* Margin bottom by footer height */
     width:100%;
     /* margin-bottom: 60px; */
-    
+  }
+
+  div.titles {
+    margin-left: 90px;
   }
   
 .housingClass{
@@ -96,8 +99,8 @@ a.navbar-brand {
     background-color: rgb(243, 243, 243);
     position: absolute;
     left: 50%;
-    top: 50%;
-    transform: translate(-50%, -18%);
+    top: 76%;
+    transform: translate(-50%, -50%);
     display: inline-block;
     vertical-align: top;
     
@@ -106,12 +109,11 @@ a.navbar-brand {
   display: block;
   text-decoration: none;
   color:black;
-  font-size: 75px;
+  font-size: 70px;
   text-align:center;
   font-family: sans-serif;
   font-weight: 300;
   margin-left: auto;
-  margin-top: 15px;
 }
 /* #results-text{
   text-decoration: none;
@@ -125,23 +127,25 @@ a.navbar-brand {
   color:black;
 }
 #results-page .USD{
+  text-align: center;
   display: inline-block;
-  width: 600px;
+  width: 49%;
   height: 315px;
   vertical-align: top;
-  margin-left: 10%;
-  text-align: left;
+  /* background: yellow; */
+  margin-left: 1%;
 }
+
 #results-page .USD span{
   text-align: left;
 }
 #results-page .conversion{
   display: inline-block;
-  width: 600px;
+  width: 49%;
   height: 315px;
   vertical-align: top;
-  margin-left: 9%;
-  margin-right: 6%;
+  /* background: brown; */
+  text-align: center;
 }
 #suggestions{
   display: inline-block;
@@ -152,25 +156,24 @@ a.navbar-brand {
   color:rgb(179, 179, 179);
   font-size: 22px;
 }
-#suggestions h1{
+/* #suggestions h1{
   margin-left: 25px;
-}
+} */
 #suggestions img{
-  width: 300px;
+  width: 200px;
   height: 200px;
-  margin-left: 5%;
+  margin: 10px;
+  /* margin-left: 5%; */
 }
-#suggestions h3{
+
+#suggestions img:nth-child(1){
+  margin-left: 50px;
+  /* margin-left: 5%; */
+}
+/* #suggestions h3{
   display: inline-block;
   margin-left: 10%;
-  
-}
-.longbar{
-  background-color: rgb(59, 59, 59);
-  display: inline-block;
-  width: 100%;
-  height: 20px;
-}
+} */
   .slidecontainer {
     background-color: white;
     opacity: 0.9;
@@ -181,6 +184,7 @@ a.navbar-brand {
     transform: translate(-50%, -17%);
     border-radius: 1px;
     padding: 8px;
+    z-index: 1;
   }
 
   .slider {
@@ -293,7 +297,24 @@ a.navbar-brand {
     border-bottom-color:#1E2021;
     right:10px;
     top:-12px;
-    
+}
+
+.option-titles {
+  text-align: center;
+}
+
+.option-titles h3 {
+  display: inline-block;
+  margin: 20px;
+  width: auto;
+  /* background: green; */
+}
+
+.option-images span{
+  /* width: 10px;
+  height: 10px;
+  /* margin: 20px; */
+  display: inline-block;
 }
 
 .help-tip p:after{ /* Prevents the tooltip from being hidden */

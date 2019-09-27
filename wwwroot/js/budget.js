@@ -71,6 +71,7 @@
             if(totalHousing <= 0.1){
                 document.getElementById("img1").innerHTML = "<img src='../images/cheap-housing.jpg' alt='blahhhhhhhhh'>";
                 // document.getElementById("myRangeHousing").style.background = "red";
+                changeColor(red);
             }
             else if(totalHousing <= 0.3){
                 document.getElementById("img1").innerHTML = "<img src='../images/med-housing.jpg' alt='blahhhhhhhhh'>";
