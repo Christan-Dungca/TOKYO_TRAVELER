@@ -45,6 +45,7 @@
         var TperDay = (startVal * totalTransportation) / parseInt(dur.value);
         ///////////////////////////////////////////
         var total = (HperDay + FperDay + LperDay + TperDay);
+        var yenConversion = 107.83;
         
         console.log(startVal);
         // console.log(totalHousing);
@@ -52,13 +53,59 @@
         // console.log("Slider sum: " + sliderSum);
         // console.log("housing per day " + HperDay);
         if(sliderSum <= 1){
-            document.getElementById("total").innerHTML = "$" + Math.floor(total)+ " Total average per day";
-            document.getElementById("totalHousing").innerHTML = "$" + Math.floor(HperDay)+ " Housing Per Day";
-            document.getElementById("totalFood").innerHTML = "$" + Math.floor(FperDay)+ " Food Per Day";
-            document.getElementById("totalLeisure").innerHTML = "$" + Math.floor(LperDay)+ " Leisure Per Day";
-            document.getElementById("totalTransportation").innerHTML = "$" + Math.floor(TperDay)+ " Transportation";
+            document.getElementById("total").innerHTML = "Total/Day = $" + Math.floor(total);
+            document.getElementById("totalHousing").innerHTML = "Housing/Day = $" + Math.floor(HperDay);
+            document.getElementById("totalFood").innerHTML = "Food/Day = $" + Math.floor(FperDay);
+            document.getElementById("totalLeisure").innerHTML = "Leisure/Day = $" + Math.floor(LperDay);
+            document.getElementById("totalTransportation").innerHTML = "Transportation/Day = $" + Math.floor(TperDay);
+            //conversion
+            document.getElementById("total-conversion").innerHTML = "Total in Yen/Day = ¥"+ Math.floor(total * yenConversion); 
+            document.getElementById("housing-conversion").innerHTML = "Housing in Yen/Day = ¥"+ Math.floor(HperDay * yenConversion); 
+            document.getElementById("food-conversion").innerHTML = "Food in Yen/Day = ¥"+ Math.floor(FperDay * yenConversion); 
+            document.getElementById("leisure-conversion").innerHTML = "Leisure in Yen/Day = ¥"+ Math.floor(LperDay * yenConversion); 
+            document.getElementById("transportation-conversion").innerHTML = "Transportation in Yen/Day = ¥"+ Math.floor(TperDay * yenConversion); 
+            //New check to see if each slider is at certain spots, then gen photos (suggestions).
+
+            if(totalHousing <= 0.1){
+                document.getElementById("img1").innerHTML = "<img src='../images/cheap-housing.jpg' alt='blahhhhhhhhh'>";
+            }
+            else if(totalHousing <= 0.3){
+                document.getElementById("img1").innerHTML = "<img src='../images/med-housing.jpg' alt='blahhhhhhhhh'>";
+            }
+            else if(totalHousing > 0.3){
+                document.getElementById("img1").innerHTML = "<img src='../images/luxury-housing.jpg' alt='blahhhhhhhhh'>";
+            }
+            if(totalFood <= 0.1){
+                document.getElementById("img2").innerHTML = "<img src='../images/cheap-food.jpg' alt='blahhhhhhhhh'>";
+            }
+            else if(totalFood <= 0.3){
+                document.getElementById("img2").innerHTML = "<img src='../images/med-food.jpg' alt='blahhhhhhhhh'>";
+            }
+            else if(totalFood > 0.3){
+                document.getElementById("img2").innerHTML = "<img src='../images/luxury-food.png' alt='blahhhhhhhhh'>";
+            }
+            if(totalLeisure <= 0.1){
+                document.getElementById("img3").innerHTML = "<img src='../images/cheap-leisure.jpg' alt='blahhhhhhhhh'>";
+            }
+            else if(totalLeisure <= 0.3){
+                document.getElementById("img3").innerHTML = "<img src='../images/med-leisure.jpg' alt='blahhhhhhhhh'>";
+            }
+            else if(totalLeisure > 0.3){
+                document.getElementById("img3").innerHTML = "<img src='../images/luxury-leisure.jpg' alt='blahhhhhhhhh'>";
+            }
+            if(totalTransportation <= 0.1){
+                document.getElementById("img4").innerHTML = "<img src='../images/cheap-trans.jpg' alt='blahhhhhhhhh'>";
+            }
+            else if(totalTransportation <= 0.3){
+                document.getElementById("img4").innerHTML = "<img src='../images/med-trans.png' alt='blahhhhhhhhh'>";
+            }
+            else if(totalTransportation > 0.3){
+                document.getElementById("img4").innerHTML = "<img src='../images/luxury-trans.jpg' alt='blahhhhhhhhh'>";
+            }
+
+            return(document.getElementById("err").innerHTML = "");
         }
-        if(sliderSum > 1){
+        else if(sliderSum > 1){
             return(document.getElementById("err").innerHTML = "Please lower a slider");
         }
     }
