@@ -19,7 +19,11 @@ a.navbar-brand {
       font-size: 16px;
     }
   }
-  
+  .tester-not-important-blank-thing{
+    color: rgb(107, 192, 107);
+    color: rgb(233, 233, 127);
+    color: rgb(248, 98, 98);
+  }
   .border-top {
     border-top: 1px solid #e5e5e5;
   }
@@ -109,7 +113,7 @@ a.navbar-brand {
   display: block;
   text-decoration: none;
   color:black;
-  font-size: 70px;
+  font-size: 60px;
   text-align:center;
   font-family: sans-serif;
   font-weight: 300;
@@ -208,7 +212,7 @@ a.navbar-brand {
     appearance: none;
     width: 25px;
     height: 25px;
-    background: #4CAF50;
+    background: rgb(0, 0, 0);
     cursor: pointer;
   }
   

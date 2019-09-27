@@ -9,24 +9,68 @@
         
     var yenConversion = 107.83;
 
-    output.innerHTML = slider.value;
+    // output.innerHTML = slider.value;
 
-    slider.oninput = function() {
-        output.innerHTML = this.value;
-    }
+    // slider.oninput = function() {
+    //     output.innerHTML = this.value;
+    // }
+
+
+
     function convertCash(){
         document.getElementById("slider-tip").innerHTML = "¥" +Math.floor(start.value * yenConversion);
     }
+
     //////////////////////////////////////
     //add a hover effect on the slider to let ppl know how much is what
     //////////////////////////////////////
     
-    // document.addEventListener("mousemove", showSliderTip);
+$(document).ready(function(){
+    $("body").click(function(){
+        if(slider1.value <= 10){
+            $("#myRangeHousing").css("background", "rgb(248, 98, 98)");
+        }
+        if(slider1.value <= 30 && slider1.value >10){
+            $("#myRangeHousing").css("background", "rgb(233, 233, 127)");
+        }
+        if(slider1.value > 30){
+            $("#myRangeHousing").css("background", "rgb(107, 192, 107)");
+        }
+        if(slider2.value <= 10){
+            $("#myRangeFood").css("background", "rgb(248, 98, 98)");
+        }
+        if(slider2.value <= 30 && slider2.value >10){
+            $("#myRangeFood").css("background", "rgb(233, 233, 127)");
+        }
+        if(slider2.value > 30){
+            $("#myRangeFood").css("background", "rgb(107, 192, 107)");
+        }
+        if(slider3.value <= 10){
+            $("#myRangeLeisure").css("background", "rgb(248, 98, 98)");
+        }
+        if(slider3.value <= 30 && slider3.value >10){
+            $("#myRangeLeisure").css("background", "rgb(233, 233, 127)");
+        }
+        if(slider3.value > 30){
+            $("#myRangeLeisure").css("background", "rgb(107, 192, 107)");
+        }
+        if(slider4.value <= 10){
+            $("#myRangeTransportation").css("background", "rgb(248, 98, 98)");
+        }
+        if(slider4.value <= 30 && slider4.value >10){
+            $("#myRangeTransportation").css("background", "rgb(233, 233, 127)");
+        }
+        if(slider4.value > 30){
+            $("#myRangeTransportation").css("background", "rgb(107, 192, 107)");
+        }
+    });
+});
 
-    // function showSliderTip(){
-    //     document.getElementById("nonerr").innerHTML = "TESSSST";
-    // }
 
+    function checkvalues(){
+        getinfo();
+    }
+    
     function getinfo()
     {
         //new variables to calculate %'s
@@ -34,7 +78,7 @@
             totalFood = parseInt(slider2.value) / 100,
             totalLeisure = parseInt(slider3.value) / 100,
             totalTransportation = parseInt(slider4.value) / 100;
-
+    
         var sliderSum = (totalHousing + totalFood + totalLeisure + totalTransportation);
         var startVal = parseInt(start.value);
         var HperDay = (startVal * totalHousing) / parseInt(dur.value);
@@ -71,10 +115,11 @@
             if(totalHousing <= 0.1){
                 document.getElementById("img1").innerHTML = "<img src='../images/cheap-housing.jpg' alt='blahhhhhhhhh'>";
                 // document.getElementById("myRangeHousing").style.background = "red";
-                changeColor(red);
+                // changeColor("red");
             }
             else if(totalHousing <= 0.3){
                 document.getElementById("img1").innerHTML = "<img src='../images/med-housing.jpg' alt='blahhhhhhhhh'>";
+                changeColor("yellow");
             }
             else if(totalHousing > 0.3){
                 document.getElementById("img1").innerHTML = "<img src='../images/luxury-housing.jpg' alt='blahhhhhhhhh'>";
@@ -110,9 +155,14 @@
             return(document.getElementById("err").innerHTML = "");
         }
         else if(sliderSum > 1){
-            return(document.getElementById("err").innerHTML = "Please lower a slider");
+            return(document.getElementById("err").innerHTML = "Please lower a slider for now, the validations broke things...");
         }
     }
+    
+
+
+
+
     ///////////////////////////////////////////////////////////////////////////////////
     ///////////THIS IS FOR ONE SLIDER//////////////////////////////////////////////////
     ///////////////////////////////////////////////////////////////////////////////////

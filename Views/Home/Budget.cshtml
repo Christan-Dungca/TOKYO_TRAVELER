@@ -18,27 +18,21 @@
             <h3>Duration: </h3>
             <input type="text" placeholder="In Days*" name="duration" id="duration">
             <h3>Amount in USD:</h3>
-            <p style="display:inline-block;">$<input type="text" placeholder="Enter a whole number" name="amount" id="amount" oninput="convertCash()"></p>
+            <p style="display:inline-block;">$<input type="text" placeholder="Enter a whole number" name="amount" id="amount" oninput="convertCash(); getinfo();"></p>
             <p id="slider-tip" style="margin: 0px; display:inline-block; margin-left: 25px; color:black;">¥</p>
             <hr>
             <h3>Priority Range</h3>
             <div class="help-tip">
-                <p>Slide the bar to pick a Priority for each section. Each slider is sorted from lowest to highest priority, some day it'll work properly.</p>
+                <p>Click and drag the sliders to display which section you prioritize more. Red is for the extreme couponer who buys 40 bottles of ketchup for $3.00. Yellow is for that mellow one. Green is for the people who want to splurge a little... or a lot.</p>
             </div>
-            <!-- <div class="notch-line">
-                <div class="notch">|</div>
-                <div class="notch">|</div>
-                <div class="notch">|</div>
-                <p style="display:inline-block">|</p>
-            </div> -->
             <h5>Housing: </h5>
-            <input type="range" name="housing-slider" class="slider" id="myRangeHousing" min="0" max="80" value="0">
+            <input type="range" name="housing-slider" class="slider" id="myRangeHousing" min="0" max="80" value="0" onclick="checkvalues()">
             <h5>Food: </h5>
-            <input type="range" name="food-slider" class="slider" id="myRangeFood" min="0" max="80" value="0">
+            <input type="range" name="food-slider" class="slider" id="myRangeFood" min="0" max="80" value="0" onclick="checkvalues()">
             <h5>Leisure: </h5>
-            <input type="range" name="leisure-slider" class="slider" id="myRangeLeisure" min="0" max="80" value="0">
+            <input type="range" name="leisure-slider" class="slider" id="myRangeLeisure" min="0" max="80" value="0" onclick="checkvalues()">
             <h5>Transportation: </h5>
-            <input type="range" name="transportation-slider" class="slider" id="myRangeTransportation" min="0" max="80" value="0">
+            <input type="range" name="transportation-slider" class="slider" id="myRangeTransportation" min="0" max="80" value="0" onclick="checkvalues()">
             
             <!-- <input type="range" name="Transportation-slider" step="33" class="slider" id="myRange3" min="0" max="100" value="0"> -->
             <!-- <p>Value: <span id="demo"></span></p> -->
@@ -47,7 +41,7 @@
     </div>
     <div id="results-page">
         <div id="see-results" >
-            <a href="#results-page">Click For Results</a>
+            <a href="#results-page">Your Budget</a>
             <br><br><br><br>
             <div class="USD">
                 <h1>In USD $</h1>
