@@ -19,40 +19,48 @@
             <h3>Amount:</h3>
             <input type="text" placeholder="Enter a whole number" name="amount" id="amount">
             <hr>
-            <h3>Price Range </h3>
+            <h3>Priority Range</h3>
             <div class="help-tip">
-                <p>Each line represents a notch on the scale. Starting from lowest priority to highest priority, move the slider to the position you want to allocate more funds to on your trip.</p>
+                <p>Slide the bar to pick a Priority for each section. Each slider is sorted from lowest to highest priority. Note that you can't have the same priority for multiple sliders.</p>
             </div>
-            <div class="notch-line">
+            <!-- <div class="notch-line">
                 <div class="notch">|</div>
                 <div class="notch">|</div>
                 <div class="notch">|</div>
                 <p style="display:inline-block">|</p>
-            </div>
-            <input type="range" name="housing-slider" step="33" class="slider" id="myRange" min="0" max="99" value="0">
+            </div> -->
+            <h5>Housing: </h5>
+            <input type="range" name="housing-slider" class="slider" id="myRangeHousing" min="0" max="80" value="0">
+            <h5>Food: </h5>
+            <input type="range" name="food-slider" class="slider" id="myRangeFood" min="0" max="80" value="0">
+            <h5>Leisure: </h5>
+            <input type="range" name="leisure-slider" class="slider" id="myRangeLeisure" min="0" max="80" value="0">
+            <h5>Transportation: </h5>
+            <input type="range" name="transportation-slider" class="slider" id="myRangeTransportation" min="0" max="80" value="0">
             
             <!-- <input type="range" name="Transportation-slider" step="33" class="slider" id="myRange3" min="0" max="100" value="0"> -->
             <!-- <p>Value: <span id="demo"></span></p> -->
-            <button id="getinfo" onclick="getinfo()" class="btn btn-primary" style="margin-left:40%;">Calculate</button>
+            <button id="getinfo" onclick="getinfo()" class="btn btn-success" style="margin-left:40%;">Calculate</button>
         </div>
     </div>
-    <div class="results">
-        <h1 id="test"></h1>
-    </div>
-    <div id="see-results" >
-        <h1 style="font-weight: 400; font-family: sans-serif; text-align:center; font-size: 124px; color:white;">RESULTS</h1>
-        <h2 style="color:white; text-align:center;"><span id="total"></span></h2>
-        <h2 style="color:white; text-align:center;"><span id="totalHousing"></span></h2>
-        <h2 style="color:white; text-align:center;"><span id="totalFood"></span></h2>
-        <h2 style="color:white; text-align:center;"><span id="totalLeisure"></span></h2>
-        <h2 style="color:white; text-align:center;"><span id="totalTransportation"></span></h2>
-        <h2 style="color:white; text-align:center;"><span id="extra"></span></h2>
-    </div>
-    <div class="result-part">
-        <div class="result-list">
+    <div id="results-page">
+        <div id="see-results" >
+            <a href="#results-page">Click For Results</a>
+            <br><br>
+            <h1 id="results-text">RESULTS</h1>
+            <h2 style="color:white; text-align:center;"><span id="total"></span></h2>
+            <h2 style="color:white; text-align:center;"><span id="totalHousing"></span></h2>
+            <h2 style="color:white; text-align:center;"><span id="totalFood"></span></h2>
+            <h2 style="color:white; text-align:center;"><span id="totalLeisure"></span></h2>
+            <h2 style="color:white; text-align:center;"><span id="totalTransportation"></span></h2>
+            <h2 style="color:white; text-align:center;"><span id="extra"></span></h2>
+        </div>
+        <div class="result-part">
+            <div class="result-list">
+            </div>
         </div>
     </div>
-
+    
 
     <script src="~/js/budget.js" type="text/javascript"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
