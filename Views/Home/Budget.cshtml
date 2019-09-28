@@ -17,7 +17,7 @@
             <h3 id="nonerr" style="color:green;"></h3>
             <h3>Duration: </h3>
             <input type="text" placeholder="In Days*" name="duration" id="duration">
-            <h3>Amount in USD:</h3>
+            <h3>USD: &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp JPY:</h3>
             <p style="display:inline-block;">$<input type="text" placeholder="Enter a whole number" name="amount" id="amount" oninput="convertCash(); getinfo();"></p>
             <p id="slider-tip" style="margin: 0px; display:inline-block; margin-left: 25px; color:black;">¥</p>
             <hr>
@@ -36,7 +36,13 @@
             
             <!-- <input type="range" name="Transportation-slider" step="33" class="slider" id="myRange3" min="0" max="100" value="0"> -->
             <!-- <p>Value: <span id="demo"></span></p> -->
-            <button id="getinfo" onclick="getinfo()" class="btn btn-success" style="margin-left:40%;">Calculate</button>
+            <a id="getinfo" onclick="getinfo()" href="#see-results">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Enter
+            </a>
         </div>
     </div>
     <div id="results-page">

@@ -10,7 +10,7 @@
     var yenConversion = 107.83;
 
     // output.innerHTML = slider.value;
-
+    // var outputChecker = slider1.value;
     // slider.oninput = function() {
     //     output.innerHTML = this.value;
     // }
@@ -24,7 +24,8 @@
     //////////////////////////////////////
     //add a hover effect on the slider to let ppl know how much is what
     //////////////////////////////////////
-    
+    //try a from to, from one value to another
+    //allow location to determine conversion rates per area on exchange rate
 $(document).ready(function(){
     $("body").click(function(){
         if(slider1.value <= 10){
