@@ -103,7 +103,7 @@ a.navbar-brand {
     background-color: rgb(243, 243, 243);
     position: absolute;
     left: 50%;
-    top: 76%;
+    top: 70%;
     transform: translate(-50%, -50%);
     display: inline-block;
     vertical-align: top;
@@ -163,22 +163,43 @@ a.navbar-brand {
 /* #suggestions h1{
   margin-left: 25px;
 } */
-#suggestions img{
-  width: 200px;
-  height: 200px;
-  margin: 10px;
-  /* margin-left: 5%; */
+
+#suggestions .option-titles{
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
 }
 
-#suggestions img:nth-child(1){
+#suggestions .option-images {
+  display: flex;
+  justify-items: center;
+  justify-content: space-around;
+}
+
+#suggestions .option-images img{
+  width: 200px;
+  height: 200px;
+  /* margin: 10px;
+  margin-left: 140px; */
+}
+
+#img3 {
+  margin-right: 70px;
+}
+
+#img4 {
+  margin-right: 65px;
+}
+
+/* #suggestions .option-images img:nth-child(1){
   margin-left: 50px;
   margin-left: 5%;
- }
+ } */
 
-  #suggestions h3{
+  /* #suggestions h3{
   display: inline-block;
   margin-left: 10%;
-} 
+}  */
   .slidecontainer {
     background-color: white;
     opacity: 0.9;

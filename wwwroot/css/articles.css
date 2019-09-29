@@ -3,6 +3,11 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  overflow-x: scroll;
+}
+
 body {
   width: 100%;
   height: 100vh;
@@ -65,6 +70,7 @@ body .content-wrapper {
   width: 100%;
   height: 100vh;
   background: #101010;
+  scroll-behavior: smooth;
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -301,65 +307,5 @@ body section.airline-article .airline-article-section p {
 body section.airline-article .airline-article-section img {
   margin: 20px 10% 20px 9%;
   width: 80%;
-}
-
-body section.airline-article {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: 7;
-}
-
-body section.airline-article .img-wrapper {
-  width: 100%;
-  height: 85%;
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-  background: url(../images/in-air.jpg);
-  background-size: cover;
-  display: inline-block;
-}
-
-body section.airline-article .img-wrapper .text-wrapper {
-  position: absolute;
-  left: 9%;
-  bottom: 35%;
-  background: #679db4;
-}
-
-body section.airline-article .img-wrapper .text-wrapper h1 {
-  padding: 15px 45px 5px 45px;
-  color: white;
-  font-size: 40px;
-  font-weight: 400;
-  word-spacing: 8px;
-}
-
-body section.airline-article .img-wrapper .text-wrapper p {
-  padding: 0px 45px 0 45px;
-  color: white;
-}
-
-body section.airline-article div.article-shadow {
-  position: absolute;
-  top: 47%;
-  left: 50%;
-  -webkit-transform: translate(-50%, 94%);
-          transform: translate(-50%, 94%);
-  width: 80.2%;
-  height: 180px;
-  background: rgba(103, 157, 180, 0.4);
-}
-
-body section.airline-article section.housing-article {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background: url("../images/dog.jpg");
 }
 /*# sourceMappingURL=articles.css.map */

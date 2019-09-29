@@ -111,6 +111,10 @@ airlineExplore.addEventListener('click', () => {
     toggleTween(t4)
 });
 
+airlineNav.addEventListener('click', () => {
+    toggleTween(t4)
+});
+
 // //////////////////////// //
 //  explore housing section //
 // //////////////////////// //
