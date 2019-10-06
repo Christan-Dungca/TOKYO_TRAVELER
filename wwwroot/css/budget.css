@@ -191,7 +191,7 @@ a.navbar-brand {
   margin-right: 65px;
 }
 
-/* #suggestions .option-images img:nth-child(1){
+#suggestions .option-images img:nth-child(1){
   margin-left: 50px;
   margin-left: 5%;
 }
@@ -299,7 +299,7 @@ a.navbar-brand {
     border-left: none;
     border-right:none;
   }
-  .help-tip p{    /* The tooltip */
+  .help-tip p{    
     display: none;
     text-align: left;
     background-color: #1E2021;
